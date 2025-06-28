@@ -2,7 +2,7 @@ import SwiftUI
 
 
 struct ContentView: View {
-    var quotes = ["The only way to do great work is to love what you do.", "Your time is limited, don't waste it living someone else's life.", "Believe you can and you're halfway there."]
+    var quotes = ["HI CAN I SEE THIS! The only way to do great work is to love what you do.", "Your time is limited, don't waste it living someone else's life.", "Believe you can and you're halfway there."]
 
 
 @State private var currentQuote = "GO YOU"
