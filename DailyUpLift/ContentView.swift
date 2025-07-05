@@ -85,6 +85,7 @@ struct ContentView: View {
                     //Footer Text
                     Text("Built by: RARE_Dev")
                         .font(.footnote)
+                        .padding(.vertical, 10)
                     
                 } else {
                     
@@ -92,8 +93,10 @@ struct ContentView: View {
                     
                     //New generated quote
                     Text(currentQuote)
-                        .font(.system(size: 30, weight: .semibold))
+                        .font(.system(size: 40, weight: .thin))
                         .multilineTextAlignment(.center)
+                        .foregroundColor(.black)
+                        .padding(.vertical, 50)
                     
                     //Button generates new quote
                     Button(action: {
@@ -103,8 +106,8 @@ struct ContentView: View {
                         Text("Another Lift")
                             .font(.system(size: 40, weight: .semibold))
                             .foregroundColor(.black)
-                            .padding(.vertical,20)
-                            .padding(.horizontal, 20)
+                            .padding(.vertical,10)
+                            .padding(.horizontal, 10)
                             .cornerRadius(100)
                     }
                     .background(
@@ -120,8 +123,8 @@ struct ContentView: View {
                         Text("Home")
                             .font(.system(size: 40, weight: .semibold))
                             .foregroundColor(.black)
-                            .padding(.vertical,20)
-                            .padding(.horizontal, 20)
+                            .padding(.vertical,10)
+                            .padding(.horizontal, 10)
                             .cornerRadius(100)
                     }
                     .background(
