@@ -21,8 +21,8 @@ struct ContentView: View {
             LinearGradient(
                     gradient: Gradient(colors: [
                     
-                        Color(red: 0.95, green: 0.9, blue: 0.9), // Light aqua top
-                        Color(red: 0.0, green: 0.6, blue: 0.7)   // Deep teal bottom
+                        
+                        Color(red: 255 / 255, green: 200 / 255, blue: 221 / 255)   // Deep teal bottom
                     ]),
                     startPoint: .top,
                     endPoint: .bottom
@@ -33,36 +33,57 @@ struct ContentView: View {
                 
                 if isHomeScreen {
                     
+                    
                     //Welcome Sign
                     
                     Text(welcomeSign)
                         .font(.system(size: 40, weight: .bold))
+                        .foregroundColor(Color.black)
                     Spacer()
                     
                     //First Daily Lift
                     Text(welcomeMessage)
                         .font(.system(size: 30, weight: .bold))
+                        .foregroundColor(Color.black)
                     
                     
                     Spacer()
                     
-                    //Button to generate daily lift
-                    Button("DAILY LIFT") {
+//                    Button to generate daily lift
+//                    Button("DAILY LIFT") {
+//                        isHomeScreen = false
+//                        currentQuote = quotes.randomElement()!
+//                        
+//                    }
+//                    .font(.system(size: 45, weight: .semibold))
+//                    .background(
+//                                Color(red: 162/255, green: 210/255, blue: 255/255)
+//                            )
+//                    .foregroundColor(.black)
+//                    .cornerRadius(50)
+//                    Spacer()
+                    
+                    
+                    Button(action: {
                         isHomeScreen = false
                         currentQuote = quotes.randomElement()!
-                        
+                    }) {
+                        Text("Daily Lift")
+                            .font(.system(size: 45, weight: .semibold))
+                            .padding(.vertical,20)
+                            .padding(.horizontal, 40)
+                            .background(
+                                        Color(red: 162/255, green: 210/255, blue: 255/255)
+                                    )
+                            .foregroundColor(.black)
+                            .cornerRadius(100)
                     }
-                    .font(.title2)
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.black)
-                    .cornerRadius(50)
-                    Spacer()
+                    
+                
                     
                     //Footer Text
                     Text("Built by: RARE_Dev")
                         .font(.footnote)
-                        .padding(.bottom)
                     
                 } else {
                     
@@ -72,17 +93,24 @@ struct ContentView: View {
                     Text(currentQuote)
                         .font(.system(size: 30, weight: .semibold))
                         .multilineTextAlignment(.center)
-                        .padding()
                     
                     //Button generates new quote
-                    Button("Another Lift"){
+                    Button(action: {
                         isHomeScreen = false
-                        currentQuote = getRandomQuote()
-                        
+                        currentQuote = quotes.randomElement()!
+                    }) {
+                        Text("Another Lift")
+                            .font(.system(size: 40, weight: .semibold))
+                            .foregroundColor(.black)
+                            .padding(.vertical,20)
+                            .padding(.horizontal, 20)
+                            .cornerRadius(100)
                     }
-                    .background(Color.pink)
-                    .foregroundColor(.white)
+                    .background(
+                        Color(red: 162/255, green: 210/255, blue: 255/255)
+                    )
                     .cornerRadius(50)
+                    
                     
                     //Button returns user home
                     Button("HOME"){
@@ -108,6 +136,10 @@ struct ContentView: View {
         
     }
     
+}
+
+#Preview {
+    ContentView()
 }
 
 
