@@ -69,15 +69,16 @@ struct ContentView: View {
                         currentQuote = quotes.randomElement()!
                     }) {
                         Text("Daily Lift")
-                            .font(.system(size: 45, weight: .semibold))
-                            .padding(.vertical,20)
-                            .padding(.horizontal, 40)
-                            .background(
-                                        Color(red: 162/255, green: 210/255, blue: 255/255)
-                                    )
+                            .font(.system(size: 40, weight: .semibold))
+                            .padding(.vertical, 10)
+                            .padding(.horizontal, 10)
                             .foregroundColor(.black)
                             .cornerRadius(100)
                     }
+                    .background(
+                                Color(red: 162/255, green: 210/255, blue: 255/255)
+                            )
+                    .cornerRadius(50)
                     
                 
                     
