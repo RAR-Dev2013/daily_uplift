@@ -110,18 +110,23 @@ struct ContentView: View {
                         Color(red: 162/255, green: 210/255, blue: 255/255)
                     )
                     .cornerRadius(50)
-                    
+                      
                     
                     //Button returns user home
-                    Button("HOME"){
+                    Button(action: {
                         isHomeScreen = true
-                        
+                    }) {
+                        Text("Home")
+                            .font(.system(size: 40, weight: .semibold))
+                            .foregroundColor(.black)
+                            .padding(.vertical,20)
+                            .padding(.horizontal, 20)
+                            .cornerRadius(100)
                     }
-                    .background(Color.pink)
-                    .foregroundColor(.white)
+                    .background(
+                        Color(red: 162/255, green: 210/255, blue: 255/255)
+                    )
                     .cornerRadius(50)
-                    
-                    
                     
                     
                     
